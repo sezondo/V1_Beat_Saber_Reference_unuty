@@ -25,6 +25,8 @@ public class Cube : MonoBehaviour
             Destroy(gameObject);
         }
         transform.position += Time.deltaTime * transform.forward * 2;
+
+        Destroy(gameObject,12);
     }
 
 
