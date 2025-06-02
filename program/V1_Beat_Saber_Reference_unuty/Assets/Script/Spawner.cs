@@ -1,55 +1,98 @@
 using UnityEngine;
+using System.Collections.Generic;
+using System.IO;
+
 
 public class Spawner : MonoBehaviour
 {
-    public GameObject[] cubes;
-    public Transform[] points;
+    public GameObject[] cubes;      // 0: 레드, 1: 블루 (색상별 프리팹)
+    public Transform[] points;      // 0~3: 스폰 위치(좌표)
     public AudioSource audioForBlock;
-    private int sampleWindow = 128;
-    private float spawnThreshold = -20f; // 데시벨 임계값
-    private float lastDecibel = -80f;
-    private float triggerCooldown = 0.3f; // 최소 쿨타임
-    private float triggerTimer = 0f;
+
+    private List<NoteData> noteList = new List<NoteData>();
+    private int nextNoteIdx = 0;
+
+    class NoteData
+    {
+        public float time;
+        public int spawnPoint;
+        public int direction;
+        public int colorIndex;
+    }
+    
+    void Start()
+    {
+        LoadNotesFromCSV();
+        nextNoteIdx = 0;
+        audioForBlock.Play();
+    }
 
     void Update()
     {
-        triggerTimer += Time.deltaTime;
-        if (audioForBlock.isPlaying)
+        if (nextNoteIdx >= noteList.Count) return;
+        float musicTime = audioForBlock.time;
+
+        // 다음 노트의 타이밍이 지났으면 스폰!
+        while (nextNoteIdx < noteList.Count && noteList[nextNoteIdx].time <= musicTime)
         {
-            float decibel = GetDecibel();
-            Debug.Log("Decibel: " + decibel + " | Cooldown: " + triggerTimer);
-
-
-            // 이전 데시벨보다 많이(특정값 이상) 상승했고, 쿨타임 지남
-            if (decibel > spawnThreshold && lastDecibel <= spawnThreshold && triggerTimer > triggerCooldown)
-            {
-                Debug.Log("BLOCK SPAWNED!");
-                GameObject cube = Instantiate(
-                    cubes[Random.Range(0, cubes.Length)],
-                    points[Random.Range(0, points.Length)]
-                );
-                cube.transform.localPosition = Vector3.zero;
-                cube.transform.Rotate(transform.forward, 90 * Random.Range(0, 4));
-                triggerTimer = 0f;
-            }
-
-            lastDecibel = decibel;
-
+            var note = noteList[nextNoteIdx];
+            SpawnBlock(note.colorIndex, note.direction, note.spawnPoint);
+            nextNoteIdx++;
         }
     }
 
-    float GetDecibel()
+    void SpawnBlock(int colorIndex, int direction, int spawnPoint)
     {
-        float[] waveData = new float[sampleWindow];
-        int pos = audioForBlock.timeSamples;
-        if (pos < sampleWindow) return -80f;
-
-        audioForBlock.clip.GetData(waveData, pos - sampleWindow);
-
-        float max = 0f;
-        for (int i = 0; i < sampleWindow; ++i)
-            max = Mathf.Max(max, Mathf.Abs(waveData[i]));
-
-        return 20 * Mathf.Log10(max + 1e-7f);
+        // cubes: 색상별 프리팹, points: 위치
+        GameObject prefab = cubes[Mathf.Clamp(colorIndex, 0, cubes.Length-1)];
+        Transform spawnPos = points[Mathf.Clamp(spawnPoint-1, 0, points.Length-1)]; // CSV 1~4, 배열 0~3
+        GameObject block = Instantiate(prefab, spawnPos);
+        block.transform.localPosition = Vector3.zero;
+        block.transform.rotation = GetBlockRotation(direction);
     }
+
+    Quaternion GetBlockRotation(int direction)
+    {
+        switch (direction)
+        {
+            case 0: return Quaternion.Euler(0, 180, 0);     // 위
+            case 1: return Quaternion.Euler(0, 180, 180);   // 아래
+            case 2: return Quaternion.Euler(0, 180, 90);    // 왼쪽
+            case 3: return Quaternion.Euler(0, 180, -90);   // 오른쪽
+            default: return Quaternion.identity;
+        }
+    }
+
+    void LoadNotesFromCSV()
+    {
+        string path = Path.Combine(Application.dataPath, "pattern.csv");
+        if (!File.Exists(path))
+        {
+            Debug.LogError("CSV 파일이 없습니다: " + path);
+            return;
+        }
+
+        noteList.Clear();
+        using (StreamReader sr = new StreamReader(path))
+        {
+            bool isFirst = true;
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+                if (isFirst) { isFirst = false; continue; } // 헤더 스킵
+                var tokens = line.Split(',');
+                if (tokens.Length < 4) continue;
+                NoteData note = new NoteData();
+                note.time = float.Parse(tokens[0]);
+                note.spawnPoint = int.Parse(tokens[1]);
+                note.direction = int.Parse(tokens[2]);
+                note.colorIndex = int.Parse(tokens[3]);
+                noteList.Add(note);
+            }
+        }
+        Debug.Log("노트 데이터 로드 완료! 총 " + noteList.Count + "개");
+    }
+
+    
+   
 }
