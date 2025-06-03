@@ -1,0 +1,11 @@
+Model Information:
+* title:	Beat Saber Menu
+* source:	https://sketchfab.com/3d-models/beat-saber-menu-565dfc721a874aa5b48e27a0ff06182f
+* author:	Elin (https://sketchfab.com/ElinHohler)
+
+Model License:
+* license type:	CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)
+* requirements:	Author must be credited. Modified versions must have the same license. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Beat Saber Menu" (https://sketchfab.com/3d-models/beat-saber-menu-565dfc721a874aa5b48e27a0ff06182f) by Elin (https://sketchfab.com/ElinHohler) licensed under CC-BY-SA-4.0 (http://creativecommons.org/licenses/by-sa/4.0/)

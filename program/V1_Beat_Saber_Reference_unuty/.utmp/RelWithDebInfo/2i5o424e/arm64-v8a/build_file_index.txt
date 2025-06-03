@@ -1,0 +1,2 @@
+C:\Users\psdd2\Desktop\project\V1_Beat_Saber_Reference_unuty\program\V1_Beat_Saber_Reference_unuty\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\CMakeLists.txt
+C:\Users\psdd2\Desktop\project\V1_Beat_Saber_Reference_unuty\program\V1_Beat_Saber_Reference_unuty\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\src\main\cpp\GameActivity\CMakeLists.txt

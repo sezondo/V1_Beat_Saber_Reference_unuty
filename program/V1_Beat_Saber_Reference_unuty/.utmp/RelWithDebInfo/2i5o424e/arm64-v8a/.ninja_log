@@ -1,0 +1,21 @@
+# ninja log v5
+7	1844	7706557171489282	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	986d6af1e58fa4a1
+71	553	7706302127242121	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	aaadfbe9ca6844dc
+42	1569	7706557168751491	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	59a8f0fbf352d682
+567	1143	7706302132763507	C:/Users/psdd2/Desktop/project/V1_Beat_Saber_Reference_unuty/program/V1_Beat_Saber_Reference_unuty/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2i5o424e/obj/arm64-v8a/libswappywrapper.so	cbbe31285e9e2237
+25	1571	7706557168766597	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	a4b31aed56579117
+80	1827	7706557171348092	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	82b8e7ce3a206efb
+17	1577	7706557168826375	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6cd2a2c04f524431
+66	1585	7706557168926280	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c8c46028fa8341d5
+33	1625	7706557169316860	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	849f6b71557fb0b1
+51	1773	7706557170800724	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c02beaae7fbc83a7
+1845	1975	7706557172796009	C:/Users/psdd2/Desktop/project/V1_Beat_Saber_Reference_unuty/program/V1_Beat_Saber_Reference_unuty/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2i5o424e/obj/arm64-v8a/libgame.so	a94d8f35d5d075ee
+41	1496	7706715060531167	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	59a8f0fbf352d682
+22	1503	7706715060621480	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	a4b31aed56579117
+28	1538	7706715060748220	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	6cd2a2c04f524431
+50	1554	7706715060917519	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	c8c46028fa8341d5
+10	1602	7706715061622248	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	849f6b71557fb0b1
+35	1769	7706715063329459	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	c02beaae7fbc83a7
+4	1829	7706715063930812	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	986d6af1e58fa4a1
+57	1868	7706715064319172	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	82b8e7ce3a206efb
+1869	2007	7706715065717031	C:/Users/psdd2/Desktop/project/V1_Beat_Saber_Reference_unuty/program/V1_Beat_Saber_Reference_unuty/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/2i5o424e/obj/arm64-v8a/libgame.so	a94d8f35d5d075ee

@@ -1,0 +1,70 @@
+fileFormatVersion: 2
+guid: c285a6a5c4fd2704594791d8ca9a0a6d
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 715df9372183c47e389bb6e19fbc3b52, type: 3}
+  editorImportSettings:
+    generateSecondaryUVSet: 0
+  importSettings:
+    nodeNameMethod: 1
+    animationMethod: 2
+    generateMipMaps: 1
+    texturesReadable: 0
+    defaultMinFilterMode: 9729
+    defaultMagFilterMode: 9729
+    anisotropicFilterLevel: 1
+  instantiationSettings:
+    mask: -1
+    layer: 0
+    skinUpdateWhenOffscreen: 1
+    lightIntensityFactor: 1
+    sceneObjectCreation: 2
+  assetDependencies:
+  - type: 0
+    originalUri: Assets\Resouce\beat_saber_menu\scene.bin
+    assetPath: Assets\Resouce\beat_saber_menu\scene.bin
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\Base_baseColor.jpeg
+    assetPath: Assets\Resouce\beat_saber_menu\textures\Base_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\Slice_baseColor.jpeg
+    assetPath: Assets\Resouce\beat_saber_menu\textures\Slice_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\BlackEOff_baseColor.jpeg
+    assetPath: Assets\Resouce\beat_saber_menu\textures\BlackEOff_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\bakedEnv_baseColor.jpeg
+    assetPath: Assets\Resouce\beat_saber_menu\textures\bakedEnv_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\material_baseColor.png
+    assetPath: Assets\Resouce\beat_saber_menu\textures\material_baseColor.png
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\material_emissive.jpeg
+    assetPath: Assets\Resouce\beat_saber_menu\textures\material_emissive.jpeg
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\Glow_Red_baseColor.png
+    assetPath: Assets\Resouce\beat_saber_menu\textures\Glow_Red_baseColor.png
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\Logo_baseColor.jpeg
+    assetPath: Assets\Resouce\beat_saber_menu\textures\Logo_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\Black_baseColor.jpeg
+    assetPath: Assets\Resouce\beat_saber_menu\textures\Black_baseColor.jpeg
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\light.001_baseColor.png
+    assetPath: Assets\Resouce\beat_saber_menu\textures\light.001_baseColor.png
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\light.001_emissive.jpeg
+    assetPath: Assets\Resouce\beat_saber_menu\textures\light.001_emissive.jpeg
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\misc.001_baseColor.png
+    assetPath: Assets\Resouce\beat_saber_menu\textures\misc.001_baseColor.png
+  - type: 1
+    originalUri: Assets\Resouce\beat_saber_menu\textures\misc.001_emissive.jpeg
+    assetPath: Assets\Resouce\beat_saber_menu\textures\misc.001_emissive.jpeg
+  reportItems: []

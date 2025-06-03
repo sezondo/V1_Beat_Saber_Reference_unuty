@@ -4,6 +4,7 @@ public class Saber : MonoBehaviour
 {
 
     public LayerMask layer;
+    public Manager manager;
 
     Vector3 prevPos;
 
@@ -19,10 +20,12 @@ public class Saber : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit, 1, layer))
         {
+            Cube cubeScript = hit.transform.GetComponent<Cube>();
             if (Vector3.Angle(transform.position - prevPos, hit.transform.up) > 130)
             {
-                
-                Destroy(hit.transform.gameObject);
+                manager = FindObjectOfType<Manager>();
+                manager.AddScore(1);
+                cubeScript.cubeDid = true;
             }
         }
 
